@@ -6,6 +6,6 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('model_pegawai');
+        return view('welcome_message');
     }
 }

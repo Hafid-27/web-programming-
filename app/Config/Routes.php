@@ -36,7 +36,10 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-
+$routes->get('/pegawai', 'Pegawai::index');
+$routes->post('/pegawai/simpan', 'Pegawai::simpan');
+$routes->get('/pegawai/hapus/(:any)', 'Pegawai::hapus/$1');
+$routes->get('/pegawai/edit/(:any)', 'Pegawai::edit/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
